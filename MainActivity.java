@@ -15,22 +15,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ttv1=(TextView)findViewById(R.id.tv);
-        //每行一個星星
+
         for(i=0;i<5;i++)
         {
             //星星最前面加空白，讓他變成三角形
             for(k=5;k>i+1;k--)
             {
-                a=a+"_";
+                a=a+" ";
             }
-            //每一行星星前面要增加幾個星星
-            //要分別增加0,1,2,3個，中間要夾空白
-            for(j=1;j<i+1;j++)
+            //每一行要幾個星星，中間要夾空白
+            for(j=0;j<i+1;j++)
             {
-                a=a+"*1";
+                a=a+"* ";
             }
-            //每一行一個星星，跟換行
-            a=a+"*\n";
+            //換行
+            a=a+"\n";
         }
         ttv1.setText(a);
 
